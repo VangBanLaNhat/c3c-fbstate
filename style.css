@@ -1,0 +1,196 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: #212534;
+	width: auto;
+	height: auto;
+}
+
+#main{
+	width: 100%; 
+	height: 100%;
+	background: #212534;
+}
+
+
+
+#import{
+	opacity: 0;
+	height: 0px;
+	width: 350px;
+	display: flex;
+}
+
+#importenc{
+	opacity: 0;
+	height: 0px;
+	width: 350px;
+	display: flex;
+}
+
+/*Export*/
+
+
+
+#export{
+	opacity: 0;
+	height: 0px;
+	width: 350px;
+	display: contents;
+}
+
+#exportenc{
+	opacity: 0;
+	height: 0px;
+	width: 350px;
+	display: contents;
+}
+
+.github img{
+	position: absolute;
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+}
+
+/*
+*	Button Import
+* 34cc26
+*/
+
+.btn-import {
+	margin: 10px 20px;
+	background: #000;
+	color: #00ff6387;
+}
+
+.lb-import, .importenc{
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background: #000;
+	overflow: hidden;
+}
+
+.lb-import::before, .importenc::before{
+	content: "-";
+  position: relative;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background: #00ff63;
+  color: #212534;
+  animation: spin 10s linear infinite;
+  transition: 1s;
+}
+
+.lb-import::after, .importenc::after{
+	content: "-";
+  position: absolute;
+  transform: translateY(-18%);
+  width: 85.5%;
+  height: 13%;
+  background: #212534;
+  color: #212534;
+  transition: 1s;
+}
+
+
+.lb-import span, .importenc span {
+    position: absolute;
+    z-index: 1;
+    transition: 1s;
+}
+
+.lb-import:hover:after, .importenc:hover:after{
+  background: #00ff63;
+  color: #00ff63;
+  box-shadow: 0 0 50px 10px #00ff63;
+}
+
+.lb-import:hover:before, .importenc:hover:before{
+  box-shadow: 0 0 0px 1000px #00ff63;
+}
+
+.lb-import:hover span, .importenc:hover span {
+  color: #fff;
+}
+
+/*
+*	Button Export
+*/
+.lb-export span, .exportenc span {
+    position: absolute;
+    z-index: 1;
+    transition: 1s;
+}
+
+.btn-export{
+	margin: 10px 20px;
+	background: #000;
+	color: #ff2f0087;
+}
+
+.lb-export, .exportenc{
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	background: #000;
+	overflow: hidden;
+}
+
+.lb-export::before, .exportenc::before{
+	content: "-";
+  position: relative;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background: #ff2f00;
+  color: #212534;
+  animation: spin 10s linear infinite;
+  animation-delay: 0.5s;
+  transition: 1s;
+}
+
+.lb-export::after, .exportenc::after{
+	content: "-";
+  position: absolute;
+  transform: translateY(-18%);
+  width: 85.5%;
+  height: 13%;
+  background: #212534;
+  color: #212534;
+  transition: 1s;
+}
+
+.lb-export:hover:after, .exportenc:hover:after{
+  background: #ff2f00;
+  color: #ff2f00;
+  box-shadow: 0 0 50px 10px #ff2f00;
+}
+
+.lb-export:hover:before, .exportenc:hover:before{
+  box-shadow: 0 0 0px 1000px #ff2f00;
+}
+
+.lb-export:hover span, .exportenc:hover span {
+  color: #fff;
+}
+
+
+/*
+*	Animation
+*/
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
